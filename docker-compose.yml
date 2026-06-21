@@ -1,0 +1,37 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      - GOOGLE_API_KEY=${GOOGLE_API_KEY}
+      - USE_LLM_ENRICHMENT=${USE_LLM_ENRICHMENT:-False}
+      - ENABLE_AUTOMATIC_FALLBACK=${ENABLE_AUTOMATIC_FALLBACK:-True}
+      - PIPELINE_VERSION=${PIPELINE_VERSION:-1.0.0}
+    env_file:
+      - .env
+    networks:
+      - pip-network
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+      args:
+        - VITE_API_BASE_URL=http://localhost:8000
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+    networks:
+      - pip-network
+    restart: unless-stopped
+
+networks:
+  pip-network:
+    driver: bridge

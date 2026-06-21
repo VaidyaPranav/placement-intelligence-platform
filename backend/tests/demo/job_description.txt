@@ -1,0 +1,15 @@
+We are looking for a Full Stack Developer Intern.
+
+Required Skills:
+- React
+- Node.js
+- MySQL
+- Git
+
+Preferred Skills:
+- Docker
+- AWS
+
+Candidates should have strong communication skills.
+
+Minimum CGPA: 7.0

@@ -1,0 +1,21 @@
+{
+  "student_id": "33a31d00-f886-46d5-ab6d-0f8fdb69eb7e",
+  "job_id": "bdf4d455-fcee-47d6-9d9e-74fb1bd4baa3",
+  "match_score": 80.0,
+  "matched_skills": [
+    "React",
+    "Node.js",
+    "MySQL",
+    "Git"
+  ],
+  "missing_skills": [],
+  "preferred_skills_matched": [],
+  "preferred_skills_missing": [
+    "Docker",
+    "AWS"
+  ],
+  "cgpa_eligible": true,
+  "recommendation": "GOOD_MATCH",
+  "reasoning": "Local deterministic scoring (LLM enrichment disabled). Required skills matched: 4 of 4 (100%). Preferred skills matched: 0 of 2 (0%). CGPA is 7.5, which is eligible (minimum required: 7.0).",
+  "overall_confidence": 0.1
+}

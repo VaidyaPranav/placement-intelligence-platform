@@ -1,0 +1,58 @@
+{
+  "job_id": "bdf4d455-fcee-47d6-9d9e-74fb1bd4baa3",
+  "role_title": "Full Stack Developer Intern",
+  "role_category": "Software Engineering",
+  "experience_level": "Internship",
+  "required_skills": [
+    "React",
+    "Node.js",
+    "MySQL",
+    "Git"
+  ],
+  "preferred_skills": [
+    "Docker",
+    "AWS"
+  ],
+  "soft_skills": [
+    "Communication"
+  ],
+  "minimum_cgpa": 7.0,
+  "overall_confidence": 1.0,
+  "skill_confidence": 1.0,
+  "role_confidence": 1.0,
+  "cgpa_confidence": 1.0,
+  "explainability_section": {
+    "role_evidence": "We are looking for a Full Stack Developer Intern.",
+    "skill_evidence": [
+      {
+        "skill_tag": "React",
+        "evidence_sentence": "Required Skills: - React"
+      },
+      {
+        "skill_tag": "Node.js",
+        "evidence_sentence": "Required Skills: - Node.js"
+      },
+      {
+        "skill_tag": "MySQL",
+        "evidence_sentence": "Required Skills: - MySQL"
+      },
+      {
+        "skill_tag": "Git",
+        "evidence_sentence": "Required Skills: - Git"
+      },
+      {
+        "skill_tag": "Docker",
+        "evidence_sentence": "Preferred Skills: - Docker"
+      },
+      {
+        "skill_tag": "AWS",
+        "evidence_sentence": "Preferred Skills: - AWS"
+      },
+      {
+        "skill_tag": "Communication",
+        "evidence_sentence": "Candidates should have strong communication skills."
+      }
+    ],
+    "cgpa_evidence": "Minimum CGPA: 7.0"
+  }
+}

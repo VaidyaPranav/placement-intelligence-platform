@@ -1,0 +1,165 @@
+{
+  "student_id": "33a31d00-f886-46d5-ab6d-0f8fdb69eb7e",
+  "name": "VAIDYA PRANAV",
+  "department": "IT",
+  "cgpa": 7.5,
+  "skills": [
+    "React",
+    "JavaScript",
+    "HTML5",
+    "CSS3",
+    "Node.js",
+    "Express",
+    "MySQL",
+    "MongoDB",
+    "Git",
+    "GitHub",
+    "Vercel",
+    "Cloudinary",
+    "PyCharm",
+    "Java",
+    "C",
+    "Python"
+  ],
+  "projects": [
+    {
+      "title": "ShopNow – E-Commerce Platform",
+      "complexity_score": 6
+    },
+    {
+      "title": "Campus Explore Portal",
+      "complexity_score": 7
+    },
+    {
+      "title": "CEZAR College Fest Website",
+      "complexity_score": 6
+    }
+  ],
+  "certifications": [
+    {
+      "name": "Oracle Certified Foundations Associate",
+      "issuer": "Oracle"
+    }
+  ],
+  "achievements": [
+    "Completed React.js & JavaScript courses",
+    "Certified Technical Coordinator for the CEZAR fest 2026"
+  ],
+  "internships": [],
+  "resume_text": "                                             VAIDYA PRANAV                                                                               \n                          📧 vaidyapranav987@gmail.com | 📞 +91-9652871322 | Jagtial , Telangana \n                                                                  GitHub     |  LinkedIn   |  Portfolio   \nPROFILE SUMMARY \nFull Stack Developer specializing in React.js, Node.js, Express, and MySQL, with hands-on experience building \nsecure, scalable web applications. Strong in REST API design, authentication systems, and database modeling. \nExperienced in deploying production-ready projects using Git, Cloudinary, and modern hosting platforms.\nTECHNICAL SKILLS \n•  Frontend: React.js, JavaScript (ES6+), HTML5, CSS3   \n•  Backend: Node.js, Express.js   \n•  Databases: MySQL, MongoDB  \n•  Tools & Platforms: Git, GitHub, Vercel, Cloudinary, PyCharm   \n•  Programming Languages: JavaScript, Java, C, Python\nEXPERIENCE \nFull Stack Developer (Projects) | Jan 2024 – Present  \n• Built and shipped multiple full-stack web applications using React, Node.js, Express, and MySQL. \n• Designed REST APIs with JWT-based authentication and role-based access control. \n• Modeled relational databases and optimized SQL queries for performance and scalability. \n• Integrated Cloudinary for scalable image and media uploads in production environments. \n• Debugged API failures, deployment issues, and data inconsistencies across local and production setups.\n \nPROJECTS   \nShopNow – E-Commerce Platform 🔗 | React, Node.js \n• Developed product listing, category management, and authentication workflows. \n• Implemented fast and secure REST APIs for core e-commerce operations. \n \nCampus Explore Portal 🔗 | React, Node.js, MySQL, Cloudinary \n• Built a department and faculty exploration platform with mobile-friendly uploads. \n• Implemented cloud-based media storage and secure user authentication. \n \nCEZAR College Fest Website 🔗 | React.js, Node.js, Express.js, MySQL \n• Built  college fest website that allows students to register for events and explore categories such as sports, technical \nect. \n• Designed and managed structured MySQL databases for event registration and user management. \n \nEDUCATION \nB.T ech in Information T echnology   \nJNTU Kondagattu, T elangana | 2023 – 2027 | GPA: 7.5\nACHIEVEMENTS / CERTIFICATIONS \n• Completed React.js & JavaScript courses \n• Certified T echnical Coordinator for the CEZAR fest 2026  \n• Oracle Certified Foundations Associate \n \n",
+  "resume_confidence": 0.9,
+  "verified_sources": [
+    "RESUME_PDF"
+  ],
+  "github_analysis": {
+    "repo_count": 0,
+    "languages": [],
+    "verification_status": "UNVERIFIED"
+  },
+  "technical_score": 0,
+  "project_score": 0,
+  "communication_score": 0,
+  "interview_score": 0,
+  "certification_score": 0,
+  "placement_status": "UNPLACED",
+  "target_role_category": "Software Engineering",
+  "profile_version": "1.0.0",
+  "overall_confidence": 0.9,
+  "explainability_section": {
+    "name_evidence": "VAIDYA PRANAV",
+    "department_evidence": "B.T ech in Information T echnology",
+    "cgpa_evidence": "GPA: 7.5",
+    "skill_evidence": [
+      {
+        "skill_tag": "React",
+        "evidence_sentence": "Frontend: React.js, JavaScript (ES6+), HTML5, CSS3"
+      },
+      {
+        "skill_tag": "JavaScript",
+        "evidence_sentence": "Frontend: React.js, JavaScript (ES6+), HTML5, CSS3"
+      },
+      {
+        "skill_tag": "HTML5",
+        "evidence_sentence": "Frontend: React.js, JavaScript (ES6+), HTML5, CSS3"
+      },
+      {
+        "skill_tag": "CSS3",
+        "evidence_sentence": "Frontend: React.js, JavaScript (ES6+), HTML5, CSS3"
+      },
+      {
+        "skill_tag": "Node.js",
+        "evidence_sentence": "Backend: Node.js, Express.js"
+      },
+      {
+        "skill_tag": "Express",
+        "evidence_sentence": "Backend: Node.js, Express.js"
+      },
+      {
+        "skill_tag": "MySQL",
+        "evidence_sentence": "Databases: MySQL, MongoDB"
+      },
+      {
+        "skill_tag": "MongoDB",
+        "evidence_sentence": "Databases: MySQL, MongoDB"
+      },
+      {
+        "skill_tag": "Git",
+        "evidence_sentence": "Tools & Platforms: Git, GitHub, Vercel, Cloudinary, PyCharm"
+      },
+      {
+        "skill_tag": "GitHub",
+        "evidence_sentence": "Tools & Platforms: Git, GitHub, Vercel, Cloudinary, PyCharm"
+      },
+      {
+        "skill_tag": "Vercel",
+        "evidence_sentence": "Tools & Platforms: Git, GitHub, Vercel, Cloudinary, PyCharm"
+      },
+      {
+        "skill_tag": "Cloudinary",
+        "evidence_sentence": "Tools & Platforms: Git, GitHub, Vercel, Cloudinary, PyCharm"
+      },
+      {
+        "skill_tag": "PyCharm",
+        "evidence_sentence": "Tools & Platforms: Git, GitHub, Vercel, Cloudinary, PyCharm"
+      },
+      {
+        "skill_tag": "Java",
+        "evidence_sentence": "Programming Languages: JavaScript, Java, C, Python"
+      },
+      {
+        "skill_tag": "C",
+        "evidence_sentence": "Programming Languages: JavaScript, Java, C, Python"
+      },
+      {
+        "skill_tag": "Python",
+        "evidence_sentence": "Programming Languages: JavaScript, Java, C, Python"
+      }
+    ],
+    "project_evidence": [
+      {
+        "project_title": "ShopNow – E-Commerce Platform",
+        "evidence_sentence": "ShopNow – E-Commerce Platform 🔗 | React, Node.js"
+      },
+      {
+        "project_title": "Campus Explore Portal",
+        "evidence_sentence": "Campus Explore Portal 🔗 | React, Node.js, MySQL, Cloudinary"
+      },
+      {
+        "project_title": "CEZAR College Fest Website",
+        "evidence_sentence": "CEZAR College Fest Website 🔗 | React.js, Node.js, Express.js, MySQL"
+      }
+    ],
+    "certification_evidence": [
+      {
+        "certification_name": "Oracle Certified Foundations Associate",
+        "evidence_sentence": "Oracle Certified Foundations Associate"
+      }
+    ],
+    "internship_evidence": []
+  },
+  "created_at": "2024-07-28 12:34:56+00:00",
+  "updated_at": "2026-06-21 06:36:00.349961+00:00",
+  "github_url": null,
+  "portfolio_url": null,
+  "linkedin_url": null
+}
