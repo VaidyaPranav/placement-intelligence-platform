@@ -7,23 +7,19 @@ from backend.app.config import PIPELINE_VERSION
 app = FastAPI(
     title="Placement Intelligence Platform API",
     description="Orchestrator and API Layer for Multi-Agent Student/Job Placement Intelligence",
-    version=PIPELINE_VERSION
+    version=PIPELINE_VERSION,
 )
 
 # CORS Configuration
+# Open CORS for hackathon/demo deployment
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "http://localhost:5173",
-        "http://127.0.0.1:5173",
-        "https://placement-intelligence-platform-24k6cldo3.vercel.app",
-    ],
-    allow_credentials=True,
+    allow_origins=["*"],
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
-# Register routes with Prefix
+# Register API routes
 app.include_router(api_router, prefix="/api/v1")
 
 
@@ -32,7 +28,7 @@ def read_root():
     return {
         "service": "Placement Intelligence Platform",
         "version": PIPELINE_VERSION,
-        "status": "running"
+        "status": "running",
     }
 
 
@@ -40,5 +36,5 @@ def read_root():
 def health_check():
     return {
         "status": "healthy",
-        "pipeline_version": PIPELINE_VERSION
+        "pipeline_version": PIPELINE_VERSION,
     }
