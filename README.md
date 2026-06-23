@@ -1,129 +1,412 @@
 # Placement Intelligence Platform (PIP)
 
-Placement Intelligence Platform (PIP) is a production-ready, multi-agent AI system designed to streamline recruitment and career preparation. It automatically extracts structured intelligence from resumes and job descriptions using Google Gemini, evaluates candidate fit, details skill gaps, generates study roadmaps, and compiles tailored interview preparation packages.
+## AI-Powered Multi-Agent Career Readiness & Recruitment Intelligence System
 
-## Key Features
+Placement Intelligence Platform (PIP) is a full-stack AI-powered multi-agent system that helps students evaluate their placement readiness and assists recruiters in assessing candidate suitability more effectively.
 
-- **Six Cooperative AI Agents:** Coordinated execution across specialized agents (Student, Company, Ranking, Skill Gap, Career Roadmap, and Interview agents).
-- **Graceful Failure Orchestration:** The pipeline is fault-tolerant; if downstream agents fail, it reports a `PARTIAL_SUCCESS` and returns all completed modules.
-- **Modern Dashboard UI:** A beautiful dark-mode glassmorphic dashboard built using React, Vite, TypeScript, and Recharts, with automated PDF parsing and charts.
-- **Containerized Architecture:** Fully containerized with Docker & Docker Compose for immediate production-ready local or cloud deployment.
+The platform analyzes a student's resume against a target job description and generates:
+
+* Student Profile Analysis
+* Job Requirement Extraction
+* Match Score Evaluation
+* Skill Gap Analysis
+* Personalized Career Roadmap
+* Interview Preparation Pack
 
 ---
 
-## System Architecture
+# Problem Statement
 
-The platform follows a layered API & Orchestration architecture:
+Students often apply for jobs without understanding how well their skills align with company requirements.
 
+Traditional resume screening systems usually provide only a simple score and fail to explain:
+
+* Why a candidate is a good or poor fit
+* Which skills are missing
+* How missing skills affect employability
+* What actions can improve placement readiness
+
+Recruiters and placement teams also spend significant effort manually reviewing resumes.
+
+PIP addresses these challenges through a coordinated multi-agent architecture that transforms resumes and job descriptions into actionable placement intelligence.
+
+---
+
+# Key Features
+
+## Resume Intelligence
+
+Extracts:
+
+* Skills
+* Projects
+* Certifications
+* Education Details
+* Academic Performance
+
+from uploaded resumes.
+
+## Job Intelligence
+
+Extracts:
+
+* Required Skills
+* Preferred Skills
+* Eligibility Requirements
+* Hiring Criteria
+
+from job descriptions.
+
+## Candidate Ranking
+
+Generates:
+
+* Match Score
+* Recommendation Category
+* Eligibility Status
+
+## Skill Gap Analysis
+
+Identifies:
+
+* Missing Skills
+* Priority Improvements
+* Estimated Score Improvements
+
+## Career Roadmap Generation
+
+Creates:
+
+* Weekly Learning Plans
+* Personalized Improvement Paths
+* Milestone-Based Roadmaps
+
+## Interview Preparation
+
+Generates:
+
+* Technical Questions
+* Behavioral Questions
+* Readiness Assessments
+
+---
+
+# Multi-Agent Architecture
+
+The platform is powered by six specialized agents:
+
+### 1. Student Intelligence Agent
+
+Converts unstructured resumes into structured student profiles.
+
+### 2. Company Intelligence Agent
+
+Converts job descriptions into structured hiring requirements.
+
+### 3. Ranking Agent
+
+Compares candidate profiles against job requirements.
+
+### 4. Skill Gap Agent
+
+Identifies missing skills and improvement opportunities.
+
+### 5. Career Roadmap Agent
+
+Generates personalized learning roadmaps.
+
+### 6. Interview Agent
+
+Produces interview preparation content.
+
+---
+
+# Pipeline Flow
+
+Student Resume
+↓
+Student Agent
+↓
+Job Description
+↓
+Company Agent
+↓
+Ranking Agent
+↓
+Skill Gap Agent
+↓
+Career Roadmap Agent
+↓
+Interview Agent
+↓
+Placement Intelligence Report
+
+---
+
+# Hybrid AI + Fallback Architecture
+
+PIP implements a Hybrid AI + Deterministic Fallback Architecture.
+
+## AI Mode
+
+When Gemini API services are available:
+
+* Student Agent uses LLM-powered extraction
+* Company Agent uses LLM-powered extraction
+* Enhanced understanding of resumes and job descriptions
+
+## Fallback Mode
+
+If:
+
+* API quotas are exhausted
+* Network failures occur
+* API keys become invalid
+* Gemini services become unavailable
+
+The platform automatically switches to deterministic extraction logic.
+
+This guarantees uninterrupted operation and improves reliability.
+
+---
+
+# Course Concepts Demonstrated
+
+This project demonstrates multiple concepts covered throughout the course:
+
+## Multi-Agent Systems
+
+Six specialized agents collaborate to solve a complex placement intelligence problem.
+
+## Agent Orchestration
+
+A centralized orchestration layer manages execution flow, dependencies, validation, and fault tolerance.
+
+## Antigravity-Assisted Development
+
+Antigravity was used throughout:
+
+* Planning
+* Architecture Design
+* Implementation
+* Testing
+* Debugging
+* Refinement
+
+## Security Features
+
+Implemented:
+
+* Environment-based API key management
+* Validation layers
+* Error handling
+* Automated fallback mechanisms
+
+## Agent Skills
+
+Implemented skills include:
+
+* Resume Intelligence
+* Job Intelligence
+* Candidate Ranking
+* Skill Gap Analysis
+* Career Planning
+* Interview Preparation
+
+## Deployability
+
+Implemented through:
+
+* Docker
+* Docker Compose
+* Render
+* Vercel
+* CI/CD Pipelines
+
+---
+
+# Technology Stack
+
+## Backend
+
+* Python
+* FastAPI
+* Pydantic
+* Gemini API
+* PyPDF
+
+## Frontend
+
+* React
+* TypeScript
+* Vite
+* Axios
+* Recharts
+
+## DevOps
+
+* Docker
+* Docker Compose
+* GitHub Actions
+* Render
+* Vercel
+
+---
+
+# Project Structure
+
+```text
+Placement-Intelligence/
+│
+├── backend/
+│   ├── app/
+│   │   ├── agents/
+│   │   ├── orchestrators/
+│   │   ├── api/
+│   │   └── main.py
+│   │
+│   └── tests/
+│
+├── frontend/
+│   ├── src/
+│   │   ├── components/
+│   │   ├── pages/
+│   │   ├── context/
+│   │   ├── services/
+│   │   └── types/
+│
+├── docker-compose.yml
+├── README.md
+└── .env.example
 ```
-[Resume PDF / Text] ──> [Student Agent] ──┐
-                                          ├──> [Ranking Agent] ──> [Skill Gap Agent] ──> [Roadmap Agent] ──> [Interview Agent]
-[Job Description]   ──> [Company Agent] ──┘
-```
 
-For more details on the agent flows and network topology, see the [Architecture Documentation](docs/architecture.md).
+# Local Setup
 
----
+## Clone Repository
 
-## API Endpoints
-
-The FastAPI backend exposes the following endpoints (prefixed with `/api/v1`):
-
-- `GET /health` - Health check status
-- `POST /api/v1/student/analyze` - Extract student profile
-- `POST /api/v1/job/analyze` - Extract hiring requirements
-- `POST /api/v1/match` - Candidate-job matching
-- `POST /api/v1/skill-gap` - Gap assessment
-- `POST /api/v1/roadmap` - Study roadmap generation
-- `POST /api/v1/interview` - Tailored prep pack compilation
-- `POST /api/v1/full-analysis` - Orchestrate the full sequence
-
-For payload formats and interactive examples, see the [API Documentation](docs/api.md).
-
----
-
-## Setup Instructions
-
-### Prerequisites
-- [Docker](https://www.docker.com/products/docker-desktop/) (Version 20.10+)
-- [Node.js](https://nodejs.org/) (Version 20+ for local development)
-- [Python](https://www.python.org/) (Version 3.11 for local development)
-- A **Google Gemini API Key** (Set via `GOOGLE_API_KEY` env var)
-
-### Environment Configuration
-Copy the template environment file to create your local configurations:
 ```bash
-cp .env.example .env
+git clone https://github.com/VaidyaPranav/placement-intelligence-platform.git
+
+cd placement-intelligence-platform
 ```
-Edit the newly created `.env` file and specify your `GOOGLE_API_KEY`:
+
+## Backend Setup
+
+```bash
+pip install -r requirements.txt
+
+python -m uvicorn backend.app.main:app --reload --port 8000
+```
+
+Backend:
+
+```text
+http://localhost:8000
+```
+
+## Frontend Setup
+
+```bash
+cd frontend
+
+npm install
+
+npm run dev
+```
+
+Frontend:
+
+```text
+http://localhost:5173
+```
+
+---
+
+# Environment Variables
+
+Create a `.env` file:
+
 ```env
-GOOGLE_API_KEY=<your-key>
+GOOGLE_API_KEY=YOUR_GEMINI_API_KEY
+
 USE_LLM_ENRICHMENT=True
+
 ENABLE_AUTOMATIC_FALLBACK=True
 ```
 
 ---
 
-## Startup Instructions
+# Deployment
 
-### 1. Docker Startup (Recommended)
-You can start the entire application (both backend and frontend) with a single command:
+## Backend Deployment
+
+Platform:
+
+* Render
+
+## Frontend Deployment
+
+Platform:
+
+* Vercel
+
+## Containerization
+
+Supported through:
+
 ```bash
-docker compose up --build
+docker-compose up --build
 ```
-- Access the **Frontend Application** at: `http://localhost`
-- Access the **FastAPI Swagger Docs** at: `http://localhost:8000/docs`
-
-### 2. Backend Local Startup
-```bash
-cd backend
-python -m venv venv
-# Windows
-.\venv\Scripts\activate
-# Linux/macOS
-source venv/bin/activate
-
-pip install -r requirements.txt
-python -m uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
-```
-
-### 3. Frontend Local Startup
-```bash
-cd frontend
-npm install
-npm run dev
-```
-By default, the Vite dev server runs at `http://localhost:5173`.
 
 ---
 
-## Testing & Quality Assurance
+# Testing
 
-To validate the test suite locally:
+Run all tests:
 
-### Running Backend Unit/Integration Tests
 ```bash
-cd backend
 python -m pytest
 ```
 
-### Building Frontend Assets
-```bash
-cd frontend
-npm run build
-```
+The project includes:
+
+* Agent Tests
+* API Tests
+* Orchestrator Tests
+* End-to-End Integration Tests
+
+More than 150 automated tests pass successfully.
 
 ---
 
-## Screenshots
+# Future Enhancements
 
-*(Insert visual walk-throughs and dashboards here)*
+Planned improvements include:
+
+* Recruiter Portal
+* Placement Cell Dashboard
+* Job Posting Management
+* Learning Resource Recommendations
+* Interview Simulation Agents
+* Analytics Dashboard
+* Multi-Company Candidate Ranking
 
 ---
 
-## Future Improvements
+# Live Demo
 
-1. **Persistent Datastores:** Add database configurations (e.g. PostgreSQL or MongoDB) for archiving analysis histories.
-2. **Batch Processing:** Add support for running matches across a bulk list of resumes against a job description.
-3. **Advanced PDF Extraction:** Incorporate OCR libraries for handling scanned image-based resume uploads.
-4. **Agent Self-Correction:** Incorporate reflection steps where agents self-correct outputs using validation loops.
+Frontend:
+https://placement-intelligence-platform-eight.vercel.app
+
+Backend:
+https://placement-intelligence-platform-7v0p.onrender.com
+
+---
+
+# Author
+
+Pranav Vaidya
+
+Placement Intelligence Platform (PIP)
+
+AI-Powered Multi-Agent Career Readiness & Recruitment Intelligence System
